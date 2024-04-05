@@ -272,7 +272,7 @@ void Orderbook::PruneGoodForDayOrders()
 		{
 			std::scoped_lock ordersLock{ ordersMutex_ };
 
-			for (const auto& [_, entry] : orders_)
+			for (const auto& [dummy, entry] : orders_)
 			{
 				const auto& [order, _] = entry;
 
